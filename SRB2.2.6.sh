@@ -31,7 +31,7 @@ sleep 1
 cmake ..
 make -j$(nproc)
 sleep 1
-mv ./bin/lsdlsrb2-2.2.6 /usr/bin/
+sudo -S mv ./bin/lsdlsrb2-2.2.6 /usr/bin/
 sleep 2
 cd /home/$USER/SRB2-master/assets
 rm -r debian-template
@@ -80,4 +80,4 @@ rm .travis.yml
 cd ..
 rm -r SRB2-DT
 mv SRB2-master SRB2
-sudo mv SRB2 -t /usr/share
+mv SRB2 -t /usr/share
