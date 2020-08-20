@@ -31,7 +31,7 @@ sleep 1
 cmake ..
 make -j$(nproc)
 sleep 1
-mv ./bin/lsdlsrb-2.2.6 /usr/bin/
+mv ./bin/lsdlsrb2-2.2.6 /usr/bin/
 sleep 2
 cd /home/$USER/SRB2-master/assets
 rm -r debian-template
