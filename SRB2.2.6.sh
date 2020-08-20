@@ -8,9 +8,9 @@ mkdir SRB2-DT
 mv SRB2-Data.zip -t /home/$USER/SRB2-DT
 cd /home/$USER/SRB2-DT
 unzip SRB2-Data.zip
-rm SRB2-Data.zip
 cd /home/$USER/SRB2-master/assets 
 mkdir installer
+mv ~/SRB2-Data.zip installer/
 cd ..
 mkdir build
 cd /home/$USER
