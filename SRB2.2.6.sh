@@ -10,7 +10,7 @@ mv SRB2-Data.zip -t /home/$USER/SRB2-DT
 cd /home/$USER/SRB2-DT
 unzip SRB2-Data.zip
 rm SRB2-Data.zip
-cd /home/$USER/SRB2-master/assets 
+cd /home/$USER/SRB2/assets 
 mkdir installer
 cd ..
 mkdir build
@@ -19,19 +19,19 @@ mkdir .srb2
 cd /home/$USER/SRB2-A 
 chmod 777 SRB2.sh
 mv config.cfg -t /home/$USER/.srb2
-mv SRB2.sh SRB2Icon.png -t /home/$USER/SRB2-master
+mv SRB2.sh SRB2Icon.png -t /home/$USER/SRB2
 sudo mv "Sonic Robo Blast 2.desktop" -t /usr/share/applications 
 cd /home/$USER
 rm master.zip
 rm -r SRB2-A
 cd /home/$USER/SRB2-DT
-mv music.dta patch.pk3 patch_music.pk3 player.dta srb2.pk3 zones.pk3 -t /home/$USER/SRB2-master/assets/installer
-cd /home/$USER/SRB2-master/build
+mv music.dta patch.pk3 patch_music.pk3 player.dta srb2.pk3 zones.pk3 -t /home/$USER/SRB2/assets/installer
+cd /home/$USER/SRB2/build
 sleep 1
 cmake ..
 make -j$(nproc)
 sleep 1
-mv lsdlsrb2.2.6 /usr/bin/
+mv ./bin/lsdlsrb-2.2.6 /usr/bin/
 sleep 2
 cd /home/$USER/SRB2-master/assets
 rm -r debian-template
