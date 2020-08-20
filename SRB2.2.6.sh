@@ -1,4 +1,3 @@
-clear
 sleep 2
 wget https://github.com/STJr/SRB2/archive/master.zip
 sudo apt install libsdl2-dev libsdl2-mixer-dev cmake extra-cmake-modules subversion svn-all-fast-export -y
@@ -8,9 +7,9 @@ unzip master.zip
 mkdir SRB2-DT
 mv SRB2-Data.zip -t /home/$USER/SRB2-DT
 cd /home/$USER/SRB2-DT
-unzip SRB2-Data.zip
+unzip -Data.zip
 rm SRB2-Data.zip
-cd /home/$USER/SRB2/assets 
+cd /home/$USER/SRB2-master/assets 
 mkdir installer
 cd ..
 mkdir build
@@ -26,7 +25,7 @@ rm master.zip
 rm -r SRB2-A
 cd /home/$USER/SRB2-DT
 mv music.dta patch.pk3 patch_music.pk3 player.dta srb2.pk3 zones.pk3 -t /home/$USER/SRB2/assets/installer
-cd /home/$USER/SRB2/build
+cd /home/$USER/SRB2-master/build
 sleep 1
 cmake ..
 make -j$(nproc)
@@ -80,4 +79,4 @@ rm .travis.yml
 cd ..
 rm -r SRB2-DT
 mv SRB2-master SRB2
-mv SRB2 -t /usr/share
+sudo -S mv SRB2 -t /usr/share
